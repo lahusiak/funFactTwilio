@@ -18,8 +18,10 @@ class ViewController: UIViewController {
     
     
     override func viewDidLoad() {
+        
         funFactLabel.text = "I'm a fun fact"
-       
+        funFactLabel.sizeToFit()
+        
         super.viewDidLoad()
         retrieveFunFact()
     
@@ -28,7 +30,7 @@ class ViewController: UIViewController {
         
     }
     override func viewDidLayoutSubviews(){
-        funFactLabel.numberOfLines = 3
+        funFactLabel.numberOfLines = 0
         funFactLabel.sizeToFit()
     }
 
