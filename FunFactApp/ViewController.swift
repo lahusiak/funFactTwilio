@@ -10,8 +10,6 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var phone:Phone = Phone()
-    
 //    var networkOperation = NetworkOperation()
 
     @IBOutlet weak var funFactLabel: UILabel!
@@ -115,7 +113,6 @@ class ViewController: UIViewController {
 //        self.phone.connectWithParams()
         print("Tapped button1")
         
-        
         // Use your own details here
         let twilioSID = valueForPrivateInfo("twilioSID")
         let twilioSecret = valueForPrivateInfo("twilioSecret")
@@ -123,22 +120,10 @@ class ViewController: UIViewController {
         let toNumber = valueForPrivateInfo("toNumber")
         let message = "Hey! You did it!"
         
-        // Build the request
-        let request = NSMutableURLRequest(URL: NSURL(string:"https://\(twilioSID):\(twilioSecret)@api.twilio.com/2010-04-01/Accounts/\(twilioSID)/SMS/Messages")!)
-        request.HTTPMethod = "POST"
-        request.HTTPBody = "From=\(fromNumber)&To=\(toNumber)&Body=\(message)".dataUsingEncoding(NSUTF8StringEncoding)
+        let messageService = MessageService(acctSID: twilioSID, acctSecret: twilioSecret)
         
-        // Build the completion block and send the request
-        NSURLSession.sharedSession().dataTaskWithRequest(request, completionHandler: { (data, response, error) in
-            print("Finished")
-            if let data = data, responseDetails = NSString(data: data, encoding: NSUTF8StringEncoding) {
-                // Success
-                print("Response: \(responseDetails)")
-            } else {
-                // Failure
-                print("Error: \(error)")
-            }
-        }).resume()
+        messageService.postMessage(toNumber, fromNumber: fromNumber, message: message)
+
         
         
 }

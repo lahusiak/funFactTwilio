@@ -8,14 +8,7 @@
 //
 //import Foundation
 //
-//
-//
-////Simple Rest API Request
-////from Grok Swift
-//
-//
-////public func dataTaskWithRequest(request: NSURLRequest, completionHandler: (NSData?, NSURLResponse?, NSError?) -> Void) -> {
-//
+
 //class NetworkOperation{
 //
 //    func makeGetRequest(){
