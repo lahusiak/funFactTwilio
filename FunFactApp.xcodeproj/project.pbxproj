@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		2965D5EAC444957DF97CFFDC /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DE93452F0AE3D8989CE9C6F /* libPods.a */; };
 		7C6217521CADEDA5005E0CDC /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 7C6217511CADEDA5005E0CDC /* .gitignore */; };
-		7C6217541CADEDDE005E0CDC /* SensitivePlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7C6217531CADEDDE005E0CDC /* SensitivePlist.plist */; };
 		7C6217561CADF75F005E0CDC /* SensitivePlist2.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7C6217551CADF75F005E0CDC /* SensitivePlist2.plist */; };
+		7C6217581CADFA83005E0CDC /* SensitiveFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C6217571CADFA83005E0CDC /* SensitiveFunction.swift */; };
 		7C9CBE071CA46D1C00F4825A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9CBE061CA46D1C00F4825A /* AppDelegate.swift */; };
 		7C9CBE091CA46D1C00F4825A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9CBE081CA46D1C00F4825A /* ViewController.swift */; };
 		7C9CBE0C1CA46D1C00F4825A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C9CBE0A1CA46D1C00F4825A /* Main.storyboard */; };
@@ -28,8 +28,8 @@
 		68D641F1E1883648D533F70D /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		6B054E57B456F8EB7A7ECAC3 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		7C6217511CADEDA5005E0CDC /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
-		7C6217531CADEDDE005E0CDC /* SensitivePlist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SensitivePlist.plist; sourceTree = "<group>"; };
 		7C6217551CADF75F005E0CDC /* SensitivePlist2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SensitivePlist2.plist; sourceTree = "<group>"; };
+		7C6217571CADFA83005E0CDC /* SensitiveFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SensitiveFunction.swift; sourceTree = "<group>"; };
 		7C9CBE031CA46D1C00F4825A /* FunFactApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FunFactApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C9CBE061CA46D1C00F4825A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7C9CBE081CA46D1C00F4825A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -98,8 +98,8 @@
 				7C9CBE0D1CA46D1C00F4825A /* Assets.xcassets */,
 				7C9CBE0F1CA46D1C00F4825A /* LaunchScreen.storyboard */,
 				7C9CBE121CA46D1C00F4825A /* Info.plist */,
-				7C6217531CADEDDE005E0CDC /* SensitivePlist.plist */,
 				7C6217551CADF75F005E0CDC /* SensitivePlist2.plist */,
+				7C6217571CADFA83005E0CDC /* SensitiveFunction.swift */,
 			);
 			path = FunFactApp;
 			sourceTree = "<group>";
@@ -184,7 +184,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				7C6217561CADF75F005E0CDC /* SensitivePlist2.plist in Resources */,
-				7C6217541CADEDDE005E0CDC /* SensitivePlist.plist in Resources */,
 				7C6217521CADEDA5005E0CDC /* .gitignore in Resources */,
 				7C9CBE111CA46D1C00F4825A /* LaunchScreen.storyboard in Resources */,
 				7C9CBE0E1CA46D1C00F4825A /* Assets.xcassets in Resources */,
@@ -250,6 +249,7 @@
 			files = (
 				7C9CBE091CA46D1C00F4825A /* ViewController.swift in Sources */,
 				7C9CBE1E1CA73A6700F4825A /* Phone.swift in Sources */,
+				7C6217581CADFA83005E0CDC /* SensitiveFunction.swift in Sources */,
 				7C9CBE271CAACCFA00F4825A /* PhoneService.swift in Sources */,
 				7C9CBE241CA851A300F4825A /* NetworkOperation.swift in Sources */,
 				7C9CBE071CA46D1C00F4825A /* AppDelegate.swift in Sources */,

@@ -184,10 +184,10 @@ class ViewController: UIViewController {
         
         
         // Use your own details here
-        let twilioSID = " "
-        let twilioSecret = " "
-        let fromNumber = "+"
-        let toNumber = "+"
+        let twilioSID = valueForPrivateInfo("twilioSID")
+        let twilioSecret = valueForPrivateInfo("twilioSecret")
+        let fromNumber = valueForPrivateInfo("fromNumber")
+        let toNumber = valueForPrivateInfo("toNumber")
         let message = "Hey! You did it!"
         
         // Build the request
