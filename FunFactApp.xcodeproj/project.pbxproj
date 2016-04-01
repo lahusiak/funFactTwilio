@@ -11,7 +11,8 @@
 		7C6217521CADEDA5005E0CDC /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 7C6217511CADEDA5005E0CDC /* .gitignore */; };
 		7C6217561CADF75F005E0CDC /* SensitivePlist2.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7C6217551CADF75F005E0CDC /* SensitivePlist2.plist */; };
 		7C6217581CADFA83005E0CDC /* SensitiveFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C6217571CADFA83005E0CDC /* SensitiveFunction.swift */; };
-		7C62175A1CAEC13D005E0CDC /* funFactStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C6217591CAEC13D005E0CDC /* funFactStruct.swift */; };
+		7C62175C1CAF247D005E0CDC /* FactService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C62175B1CAF247D005E0CDC /* FactService.swift */; };
+		7C62175E1CAF2DD7005E0CDC /* FunFactStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C62175D1CAF2DD7005E0CDC /* FunFactStruct.swift */; };
 		7C9CBE071CA46D1C00F4825A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9CBE061CA46D1C00F4825A /* AppDelegate.swift */; };
 		7C9CBE091CA46D1C00F4825A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9CBE081CA46D1C00F4825A /* ViewController.swift */; };
 		7C9CBE0C1CA46D1C00F4825A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C9CBE0A1CA46D1C00F4825A /* Main.storyboard */; };
@@ -19,7 +20,7 @@
 		7C9CBE111CA46D1C00F4825A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C9CBE0F1CA46D1C00F4825A /* LaunchScreen.storyboard */; };
 		7C9CBE201CA73D4000F4825A /* server.js in Resources */ = {isa = PBXBuildFile; fileRef = 7C9CBE1F1CA73D4000F4825A /* server.js */; };
 		7C9CBE221CA745D600F4825A /* SwiftRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9CBE211CA745D600F4825A /* SwiftRequest.swift */; };
-		7C9CBE241CA851A300F4825A /* NetworkOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9CBE231CA851A300F4825A /* NetworkOperation.swift */; };
+		7C9CBE241CA851A300F4825A /* FactNetworkOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9CBE231CA851A300F4825A /* FactNetworkOperation.swift */; };
 		7C9CBE271CAACCFA00F4825A /* MessageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9CBE261CAACCFA00F4825A /* MessageService.swift */; };
 /* End PBXBuildFile section */
 
@@ -30,7 +31,8 @@
 		7C6217511CADEDA5005E0CDC /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		7C6217551CADF75F005E0CDC /* SensitivePlist2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SensitivePlist2.plist; sourceTree = "<group>"; };
 		7C6217571CADFA83005E0CDC /* SensitiveFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SensitiveFunction.swift; sourceTree = "<group>"; };
-		7C6217591CAEC13D005E0CDC /* funFactStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = funFactStruct.swift; sourceTree = "<group>"; };
+		7C62175B1CAF247D005E0CDC /* FactService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FactService.swift; sourceTree = "<group>"; };
+		7C62175D1CAF2DD7005E0CDC /* FunFactStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FunFactStruct.swift; sourceTree = "<group>"; };
 		7C9CBE031CA46D1C00F4825A /* FunFactApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FunFactApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C9CBE061CA46D1C00F4825A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7C9CBE081CA46D1C00F4825A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -41,7 +43,7 @@
 		7C9CBE1C1CA59ED200F4825A /* FunFactApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "FunFactApp-Bridging-Header.h"; path = "../FunFactApp-Bridging-Header.h"; sourceTree = "<group>"; };
 		7C9CBE1F1CA73D4000F4825A /* server.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = server.js; sourceTree = "<group>"; };
 		7C9CBE211CA745D600F4825A /* SwiftRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftRequest.swift; sourceTree = "<group>"; };
-		7C9CBE231CA851A300F4825A /* NetworkOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkOperation.swift; sourceTree = "<group>"; };
+		7C9CBE231CA851A300F4825A /* FactNetworkOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FactNetworkOperation.swift; sourceTree = "<group>"; };
 		7C9CBE261CAACCFA00F4825A /* MessageService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -91,15 +93,16 @@
 				7C9CBE1C1CA59ED200F4825A /* FunFactApp-Bridging-Header.h */,
 				7C9CBE061CA46D1C00F4825A /* AppDelegate.swift */,
 				7C9CBE081CA46D1C00F4825A /* ViewController.swift */,
-				7C9CBE0A1CA46D1C00F4825A /* Main.storyboard */,
-				7C9CBE231CA851A300F4825A /* NetworkOperation.swift */,
+				7C62175B1CAF247D005E0CDC /* FactService.swift */,
+				7C9CBE231CA851A300F4825A /* FactNetworkOperation.swift */,
 				7C9CBE261CAACCFA00F4825A /* MessageService.swift */,
+				7C9CBE0A1CA46D1C00F4825A /* Main.storyboard */,
 				7C9CBE0D1CA46D1C00F4825A /* Assets.xcassets */,
 				7C9CBE0F1CA46D1C00F4825A /* LaunchScreen.storyboard */,
 				7C9CBE121CA46D1C00F4825A /* Info.plist */,
 				7C6217551CADF75F005E0CDC /* SensitivePlist2.plist */,
 				7C6217571CADFA83005E0CDC /* SensitiveFunction.swift */,
-				7C6217591CAEC13D005E0CDC /* funFactStruct.swift */,
+				7C62175D1CAF2DD7005E0CDC /* FunFactStruct.swift */,
 			);
 			path = FunFactApp;
 			sourceTree = "<group>";
@@ -248,10 +251,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				7C9CBE091CA46D1C00F4825A /* ViewController.swift in Sources */,
-				7C62175A1CAEC13D005E0CDC /* funFactStruct.swift in Sources */,
 				7C6217581CADFA83005E0CDC /* SensitiveFunction.swift in Sources */,
+				7C62175E1CAF2DD7005E0CDC /* FunFactStruct.swift in Sources */,
+				7C62175C1CAF247D005E0CDC /* FactService.swift in Sources */,
 				7C9CBE271CAACCFA00F4825A /* MessageService.swift in Sources */,
-				7C9CBE241CA851A300F4825A /* NetworkOperation.swift in Sources */,
+				7C9CBE241CA851A300F4825A /* FactNetworkOperation.swift in Sources */,
 				7C9CBE071CA46D1C00F4825A /* AppDelegate.swift in Sources */,
 				7C9CBE221CA745D600F4825A /* SwiftRequest.swift in Sources */,
 			);
