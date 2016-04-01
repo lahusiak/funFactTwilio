@@ -80,11 +80,11 @@ class ViewController: UIViewController {
         let twilioSecret = valueForPrivateInfo("twilioSecret")
         let fromNumber = valueForPrivateInfo("fromNumber")
         let toNumber = valueForPrivateInfo("toNumber")
-        let message = "Hey! You did it!"
+        let message = self.funFactLabel?.text
         
         let messageService = MessageService(acctSID: twilioSID, acctSecret: twilioSecret)
         
-        messageService.postMessage(toNumber, fromNumber: fromNumber, message: message)
+        messageService.postMessage(toNumber, fromNumber: fromNumber, message: message!)
 
         
         

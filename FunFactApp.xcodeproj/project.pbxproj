@@ -94,6 +94,7 @@
 				7C9CBE061CA46D1C00F4825A /* AppDelegate.swift */,
 				7C9CBE081CA46D1C00F4825A /* ViewController.swift */,
 				7C62175B1CAF247D005E0CDC /* FactService.swift */,
+				7C62175D1CAF2DD7005E0CDC /* FunFactStruct.swift */,
 				7C9CBE231CA851A300F4825A /* FactNetworkOperation.swift */,
 				7C9CBE261CAACCFA00F4825A /* MessageService.swift */,
 				7C9CBE0A1CA46D1C00F4825A /* Main.storyboard */,
@@ -102,7 +103,6 @@
 				7C9CBE121CA46D1C00F4825A /* Info.plist */,
 				7C6217551CADF75F005E0CDC /* SensitivePlist2.plist */,
 				7C6217571CADFA83005E0CDC /* SensitiveFunction.swift */,
-				7C62175D1CAF2DD7005E0CDC /* FunFactStruct.swift */,
 			);
 			path = FunFactApp;
 			sourceTree = "<group>";
