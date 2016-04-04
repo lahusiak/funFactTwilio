@@ -30,6 +30,7 @@ struct MessageService {
         let request = NSMutableURLRequest(URL: NSURL(string:"https://\(twilioSID):\(twilioSecret)@api.twilio.com/2010-04-01/Accounts/\(twilioSID)/SMS/Messages")!)
         request.HTTPMethod = "POST"
         request.HTTPBody = "From=\(fromNumber)&To=\(toNumber)&Body=\(message)".dataUsingEncoding(NSUTF8StringEncoding)
+        print("the is request\(request)")
         
         // Build the completion block and send the request
         NSURLSession.sharedSession().dataTaskWithRequest(request, completionHandler: { (data, response, error) in
