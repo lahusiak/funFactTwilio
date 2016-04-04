@@ -19,12 +19,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="vaz-Sb-VrA">
-                                <rect key="frame" x="82" y="269" width="198" height="33"/>
+                                <rect key="frame" x="59" y="218" width="238" height="33"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rWy-Z1-0ms">
-                                        <rect key="frame" x="0.0" y="0.0" width="198" height="33"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="238" height="33"/>
                                         <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="18"/>
-                                        <state key="normal" title="Show another fun fact!">
+                                        <state key="normal" title="Show me the next fun fact">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
                                         <connections>
@@ -32,21 +32,12 @@
                                         </connections>
                                     </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="rWy-Z1-0ms" firstAttribute="centerX" secondItem="vaz-Sb-VrA" secondAttribute="centerX" id="UMb-GK-CJd"/>
+                                </constraints>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Yu3-0C-tAP">
-                                <rect key="frame" x="120" y="341" width="122" height="33"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T4d-PU-IQw">
-                                        <rect key="frame" x="0.0" y="0.0" width="122" height="33"/>
-                                        <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="18"/>
-                                        <state key="normal" title="Text this fact!">
-                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="makeACall:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wWz-9E-FOM"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Yu3-0C-tAP">
+                                <rect key="frame" x="110" y="474" width="122" height="33"/>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Some fact goes here" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c30-lw-Oxg">
                                 <rect key="frame" x="101" y="181" width="119" height="21"/>
@@ -54,20 +45,39 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T4d-PU-IQw">
+                                <rect key="frame" x="110" y="474" width="122" height="33"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="18"/>
+                                <state key="normal" title="Text this fact!">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="makeACall:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wWz-9E-FOM"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter phone number..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bII-bo-mqo">
+                                <rect key="frame" x="89" y="410" width="164" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" enablesReturnKeyAutomatically="YES"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.29803921570000003" green="0.7843137255" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="rWy-Z1-0ms" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="25" id="10p-yh-25f"/>
                             <constraint firstItem="rWy-Z1-0ms" firstAttribute="top" relation="greaterThanOrEqual" secondItem="c30-lw-Oxg" secondAttribute="bottom" constant="80" id="9eQ-55-Zco"/>
                             <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="c30-lw-Oxg" secondAttribute="trailing" constant="20" id="CaZ-mI-4y5"/>
-                            <constraint firstItem="vaz-Sb-VrA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Rxg-dK-tQO"/>
+                            <constraint firstItem="bII-bo-mqo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MwV-EJ-g1s"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="rWy-Z1-0ms" secondAttribute="trailing" constant="25" id="Vxr-IC-Vhn"/>
                             <constraint firstItem="Yu3-0C-tAP" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="72" id="djF-VV-aTm"/>
                             <constraint firstItem="c30-lw-Oxg" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="hHh-Yb-Non"/>
                             <constraint firstItem="Yu3-0C-tAP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="keJ-Kv-Ml2"/>
                             <constraint firstItem="vaz-Sb-VrA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="vIp-5Y-WUz"/>
+                            <constraint firstItem="T4d-PU-IQw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="11" id="x23-Lh-unT"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="funFactLabel" destination="c30-lw-Oxg" id="g0k-dU-rcS"/>
+                        <outlet property="phoneField" destination="bII-bo-mqo" id="lAd-gy-dzX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

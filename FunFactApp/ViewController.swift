@@ -8,11 +8,14 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
     
-//    var networkOperation = NetworkOperation()
 
     @IBOutlet weak var funFactLabel: UILabel!
+    
+    @IBOutlet weak var phoneField: UITextField!
+    
+    let limitLength = 10
     
     let type: String = "random"
     let date: String = "year"
@@ -23,11 +26,17 @@ class ViewController: UIViewController {
         funFactLabel.text = "I'm a fun fact"
         funFactLabel.sizeToFit()
         
-        super.viewDidLoad()
-        retrieveFunFact()
-    
         
-
+        
+        phoneField.keyboardType = UIKeyboardType.DecimalPad
+        
+        super.viewDidLoad()
+        
+        //GET request to API for facts
+        retrieveFunFact()
+        
+        self.phoneField.delegate = self
+    
         
     }
     override func viewDidLayoutSubviews(){
@@ -79,7 +88,10 @@ class ViewController: UIViewController {
         let twilioSID = valueForPrivateInfo("twilioSID")
         let twilioSecret = valueForPrivateInfo("twilioSecret")
         let fromNumber = valueForPrivateInfo("fromNumber")
-        let toNumber = valueForPrivateInfo("toNumber")
+       
+        let toNumber = "\(self.phoneField?.text)"
+        
+        print("This is toNumber \(toNumber)")
         let message = self.funFactLabel?.text
         
         let messageService = MessageService(acctSID: twilioSID, acctSecret: twilioSecret)
@@ -89,5 +101,84 @@ class ViewController: UIViewController {
         
         
 }
+    
+    
+    // UITextField Delegates
+    func textFieldDidBeginEditing(textField: UITextField) {
+        print("TextField did begin editing method called")
+    }
+    func textFieldDidEndEditing(textField: UITextField) {
+        print("TextField did end editing method called")
+    }
+    func textFieldShouldBeginEditing(textField: UITextField) -> Bool {
+        print("TextField should begin editing method called")
+        return true;
+    }
+    func textFieldShouldClear(textField: UITextField) -> Bool {
+        print("TextField should clear method called")
+        return true;
+    }
+    func textFieldShouldEndEditing(textField: UITextField) -> Bool {
+        print("TextField should snd editing method called")
+        return true;
+    }
+    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
+        print("While entering the characters this method gets called")
+//        let invalidCharacters = NSCharacterSet(charactersInString: "0123456789").invertedSet
+        
+//            if (textField == phoneField)
+//            {
+//                let newString = (textField.text! as NSString).stringByReplacingCharactersInRange(range, withString: string)
+//                let components = newString.componentsSeparatedByCharactersInSet(NSCharacterSet.decimalDigitCharacterSet().invertedSet)
+//                
+//                let decimalString = components.joinWithSeparator("") as NSString
+//                let length = decimalString.length
+//                let hasLeadingOne = length > 0 && decimalString.characterAtIndex(0) == (1 as unichar)
+//                
+//                if length == 0 || (length > 10 && !hasLeadingOne) || length > 11
+//                {
+//                    let newLength = (textField.text! as NSString).length + (string as NSString).length - range.length as Int
+//                    
+//                    return (newLength > 10) ? false : true
+//                }
+//                var index = 0 as Int
+//                let formattedString = NSMutableString()
+//                
+//                if hasLeadingOne
+//                {
+//                    formattedString.appendString("1 ")
+//                    index += 1
+//                }
+//                if (length - index) > 3
+//                {
+//                    let areaCode = decimalString.substringWithRange(NSMakeRange(index, 3))
+//                    formattedString.appendFormat("(%@)", areaCode)
+//                    index += 3
+//                }
+//                if length - index > 3
+//                {
+//                    let prefix = decimalString.substringWithRange(NSMakeRange(index, 3))
+//                    formattedString.appendFormat("%@-", prefix)
+//                    index += 3
+//                }
+//                
+//                let remainder = decimalString.substringFromIndex(index)
+//                formattedString.appendString(remainder)
+//                textField.text = formattedString as String
+//                return false
+//            }
+//            else
+//            {
+//                return true
+//            }
+        return true
+       }
+    
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        print("TextField should return method called")
+        textField.resignFirstResponder();
+        return true;
+    }
 
 }
